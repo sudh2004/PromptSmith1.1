@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Prompt Smith",
+    "version": "1.0",
+    "description": "PromptSmith work with Claude, Bard, chatgpt ",
+    "permissions": [
+      "activeTab", 
+      "storage" 
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {"css":["style.css"],
+        "js":[
+            "script.js"
+        ],
+        "matches": [
+          "*://chat.openai.com/*",
+          "*://bard.ai/*",
+          "*://claude.ai/*"
+        ]
+      }
+    ],
+    "browser_action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
